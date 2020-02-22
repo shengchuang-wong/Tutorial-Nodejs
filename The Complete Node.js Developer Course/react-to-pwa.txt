@@ -1,0 +1,5 @@
+npm run eject <<< see underline project file, not required bah
+==============================================================
+npm run build <<< run for production
+npm install -g serve <<< install server
+serve -s build <<< launch it

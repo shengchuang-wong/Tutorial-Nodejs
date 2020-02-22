@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET UV_THREADPOOL_SIZE=1 && node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

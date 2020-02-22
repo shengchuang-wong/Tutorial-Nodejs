@@ -1,0 +1,81 @@
+Git Command
+===========
+1. git --version <<< view current git version
+2. git init <<< establish git for repository
+3. git status <<< check files status
+4. git add 'file_name' || git add -A || git add . <<< add file into changes list
+5. create .gitignore and list all file to be ignore such as "node_modules/"
+6. git commit -m "commit message" <<< Commit the changes
+// git commit -am "commit message" can use to add all modified file and commit (2 in 1)
+
+
+7. git push <<< only after set connection with github
+
+Github
+======
+ssh-keygen -t rsa -b 4096 -C 'address@email.com' <<< generate ssh key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa <<< add ssh key into local
+
+go to github website > login > "settings"
+"Add SSH Key"
+clip < ~/.ssh/id_rsa.pub
+paste it into key
+add key <<< add ssh key into github
+
+Add your own repository in github
+read the command given after repository created
+2 line that one
+
+
+Heroku
+======
+1. Go to heroku and create your new app
+2. Download heroku cli
+3. heroku logingit 
+4. heroku keys:add (found key, than press 'Y')
+5. heroku keys <<< view all keys
+6. heroku keys.:remove <<< to remove key
+7. ssh -v git@heroku.com <<< connect with heroku server
+
+8. in your project
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+	console.log(`Server is up on port ${port}`);
+}); // so it can run at server otherwise local
+9. package.json > scripts <<< is to specify the file to run intially
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+}
+  "engines": {
+    "node": "8.5.0"
+  },
+
+10. npm start <<< to run the scripts > "start"
+11. heroku create
+12. git push heroku || git push heroku master
+13. heroku open <<< view the output in heroku server
+14. heroku logs <<< view log
+
+HEROKU MONGODB
+==============
+AFTER heroku create
+heroku addons:create mongolab:sandbox
+heroku config <<< view mongodb link
+mongoose.connect(process.env.MONGODB_URO || 'mongodb://localhost:27017/TodoApp');
+
+heroku config:set NAME=SHENC
+heroku config:get NAME
+heroku config:unset NAME
+
+heroku config:get MONGODB_URI
+mongodb://heroku_w11x9pk4:rasbe0o0tl4vs40tovfdii2ldt@ds141534.mlab.com:41534/heroku_w11x9pk4
+Protocol://username:password@address:PORT/DATABASE
+When All Set
+============
+1. git status
+2. git add .
+3. git commit -m "commit message" 
+4. git push
+5. git push heroku

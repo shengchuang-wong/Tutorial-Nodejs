@@ -1,0 +1,8 @@
+MONGO DB COMMAND
+================
+
+db.Todos.insert({text: 'Create new Node course'})
+db.Todos.find()
+
+mongod.exe --dbpath "path"
+mongo.exe

@@ -1,0 +1,10 @@
+// save header token
+var token = postman.getResponseHeader('x-auth');
+
+postman.setEnvironmentVariable('x-auth', token);
+
+
+// save post id
+var body = JSON.parse(responseBody);
+
+postman.setEnvironmentVariable('todoId', body._id);

@@ -1,0 +1,25 @@
+Alternative of NPM
+==================
+
+npm install -g yarn
+
+1. mkdir yarn-example
+2. cd yarn-example
+3. yarn init === npm init
+4. yarn add express === npm install express --save
+5. yarn add mocha --dev === npm install mocha --save-dev
+6. yarn remove mocha
+7. yarn upgrade express || yarn upgrade express@1.1.1
+8. yarn outdated <<< check dependencies version
+9. yarn install === npm install
+10. yarn cache clean <<< clean local cache
+11. yarn run === npm run
+12. yarn global add nodemon === npm install nodemon -g
+13. yarn global upgrade nodemon@1.1.1
+14. yarn global remove nodemon
+15. 
+
+Convert NPM Project into Yarn Project
+=====================================
+1. Delete node_modules/
+2. Type in command "yarn install"
